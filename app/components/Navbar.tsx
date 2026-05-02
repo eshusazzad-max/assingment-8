@@ -3,7 +3,8 @@ import sun from "../assets/sun.png";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100 shadow-md px-5">
+    
+    <div className="max-w-7xl mx-auto navbar bg-amber-80 shadow-md px-5">
       
       {/* Logo */}
       <div className="flex-1 flex items-center gap-2">
