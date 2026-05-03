@@ -40,7 +40,7 @@ export default function HeroSection() {
               <div className="border-l h-12"></div>
 
               <div className="flex items-center gap-2 text-gray-800 font-semibold text-lg">
-                <img src={fire.src} className="w-6 h-6" />
+                <img src={fire.src} className="w-8 h-8" />
                 HOT DEALS
               </div>
             </div>

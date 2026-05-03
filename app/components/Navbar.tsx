@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import sun from "../assets/sun.png";
 
 export default function Navbar() {
   return (
-    
     <div className="max-w-7xl mx-auto navbar bg-amber-80 shadow-md px-5">
       
       {/* Logo */}
@@ -17,33 +19,46 @@ export default function Navbar() {
       {/* Links */}
       <ul className="flex items-center gap-6 font-medium">
 
-  <li className="px-3 py-1 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
-    Home
-  </li>
+        {/* HOME */}
+        <li>
+          <Link href="/" className="px-3 py-1 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
+            Home
+          </Link>
+        </li>
 
-  <li className="px-3 py-1 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
-    Products
-  </li>
+        {/* PRODUCTS */}
+        <li>
+          <Link href="/products" className="px-3 py-1 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
+            Products
+          </Link>
+        </li>
 
-  <li className="px-3 py-1 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
-    My Profile
-  </li>
+        {/* PROFILE */}
+        <li>
+          <Link href="/profile" className="px-3 py-1 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
+            My Profile
+          </Link>
+        </li>
 
-  {/* LOGIN (simple button look) */}
-  <li>
-    <button className="px-4 py-2 rounded-md  text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
-      Login
-    </button>
-  </li>
+        {/* LOGIN */}
+        <li>
+          <Link href="/login">
+            <button className="px-4 py-2 rounded-md text-gray-700 hover:bg-orange-100 hover:text-orange-500 transition cursor-pointer hover:-translate-y-1 hover:scale-105">
+              Login
+            </button>
+          </Link>
+        </li>
 
-  {/* REGISTER (highlight CTA) */}
-  <li>
-    <button className="px-4 py-2 rounded-md bg-gradient-to-r from-orange-600 to-red-400 text-white shadow hover:scale-105 transition">
-      Register
-    </button>
-  </li>
+        {/* REGISTER */}
+        <li>
+          <Link href="/register">
+            <button className="px-4 py-2 rounded-md bg-gradient-to-r from-orange-600 to-red-400 text-white shadow hover:scale-105 transition">
+              Register
+            </button>
+          </Link>
+        </li>
 
-</ul>
+      </ul>
     </div>
   );
 }
