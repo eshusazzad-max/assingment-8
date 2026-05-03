@@ -4,24 +4,24 @@ import { redirect } from "next/navigation";
 
 export default async function ProductDetails({ params }) {
 
-  // 🔐 auth check
+  //  auth check
   const session = await authClient.getSession();
   if (!session) {
     redirect("/login");
   }
 
-  // 🔥 FIX (safe destructure)
+  //  FIX (safe destructure)
   const { id } = params;
 
-  // 🔥 FIX (convert to number properly)
+  //  FIX (convert to number properly)
   const productId = parseInt(id);
 
-  // 🔥 SAFE MATCH
+  //  SAFE MATCH
   const product = products.find(
     (p) => Number(p.id) === productId
   );
 
-  // 🧪 DEBUG (check terminal console)
+  //  DEBUG (check terminal console)
   console.log("ID FROM URL:", id);
   console.log("MATCHED PRODUCT:", product);
 

@@ -20,7 +20,7 @@ export default function HeroSection() {
               Limited Time Offer
             </p>
 
-            <h1 className="text-6xl font-bold leading-tight">
+            <h1 className="text-6xl font-bold leading-tight animate__animated animate__fadeInDown">
               <span className="text-orange-500 italic">Summer</span>{" "}
               <span className="text-gray-900">Sale</span>
             </h1>
@@ -45,7 +45,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <button className="mt-8 px-8 py-3 bg-orange-500 text-white rounded-full text-lg hover:bg-orange-600 transition">
+            <button className="animate__animated animate__pulse animate__infinite mt-8 px-8 py-3 bg-orange-500 text-white rounded-full text-lg hover:bg-orange-600 transition">
               Shop Now →
             </button>
 

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ProductCard({ product }) {
   return (
     <div className="bg-white rounded-xl shadow-md p-4">
-      
+
       <img
         src={product.image}
         alt={product.name}
@@ -14,7 +14,12 @@ export default function ProductCard({ product }) {
 
       <h2 className="text-lg font-semibold mt-3">{product.name}</h2>
 
-      <p className="text-sm text-gray-500">⭐ {product.rating}</p>
+      {/* 🔥 DESCRIPTION */}
+      <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+        {product.description}
+      </p>
+
+      <p className="text-sm text-gray-500 mt-1">⭐ {product.rating}</p>
 
       <p className="text-orange-500 font-bold">${product.price}</p>
 

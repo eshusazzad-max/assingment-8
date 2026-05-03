@@ -1,68 +1,92 @@
 "use client";
 
+import GoogleButton from "../components/GoogleButton";
 import { authClient } from "../lib/auth";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+import Link from "next/link";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password: "",
-    image: "",
-  });
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const image = e.target.image.value;
+
     try {
-      await authClient.signUp.email({
-        email: form.email,
-        password: form.password,
-        name: form.name,
-        image: form.image,
+      const res = await authClient.signUp.email({
+        email,
+        password,
+        name,
+        image,
       });
 
-      router.push("/login");
+      if (!res) {
+        toast.error("Registration failed ❌");
+      } else {
+        toast.success("Registration successful 🎉");
+        router.push("/login");
+      }
     } catch (err) {
-      alert("Register failed ❌");
+      toast.error("Something went wrong ❌");
     }
   };
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <form className="bg-white p-6 shadow rounded w-80" onSubmit={handleRegister}>
-        <h2 className="text-xl font-bold mb-4">Register</h2>
+      <form
+        onSubmit={handleRegister}
+        className="bg-white p-6 shadow rounded w-80"
+      >
+        <h2 className="text-xl font-bold mb-4 text-center">
+          Register
+        </h2>
 
         <input
+          name="name"
           placeholder="Name"
           className="input input-bordered w-full mb-2"
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
+          required
         />
 
         <input
+          name="email"
+          type="email"
           placeholder="Email"
           className="input input-bordered w-full mb-2"
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
+          required
         />
 
         <input
+          name="image"
           placeholder="Photo URL"
           className="input input-bordered w-full mb-2"
-          onChange={(e) => setForm({ ...form, image: e.target.value })}
         />
 
         <input
+          name="password"
           type="password"
           placeholder="Password"
           className="input input-bordered w-full mb-3"
-          onChange={(e) => setForm({ ...form, password: e.target.value })}
+          required
         />
 
         <button className="btn bg-orange-500 text-white w-full">
           Register
         </button>
+
+        {/* 🔗 Login link */}
+        <p className="text-sm mt-3 text-center">
+          Already have an account?{" "}
+          <Link href="/login" className="text-orange-500">
+            Login
+          </Link>
+        </p>
+        <GoogleButton />
       </form>
     </div>
   );
