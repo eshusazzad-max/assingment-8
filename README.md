@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SunCart – Summer Essentials Store
 
-## Getting Started
+## Live Website
 
-First, run the development server:
+https://your-live-link-here.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+SunCart is a modern summer-themed eCommerce web application. Users can browse seasonal products like sunglasses, summer outfits, skincare, and accessories. Users can view product details and access protected pages after authentication.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Home Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Hero banner with summer sale
+* Popular Products section (3 items)
+* Summer Care Tips section
+* Top Brands section
 
-## Deploy on Vercel
+### Products
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Products loaded from JSON file
+* Each product shows image, name, description, rating, and price
+* View Details button for each product
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Product Details Page (Protected)
+
+* Accessible only after login
+* Redirects to login if not authenticated
+* Shows full product information including price, rating, stock, and description
+
+### Authentication
+
+* User registration with name, email, photo URL, and password
+* User login with email and password
+* Error and success messages using toast
+* Google login button (UI implemented)
+
+
+## Technologies Used
+
+* Next.js (App Router)
+* Tailwind CSS
+* DaisyUI
+* BetterAuth
+* React Hot Toast
+* Animate.css
+
+## Environment Variables
+
+This project uses environment variables to store sensitive configuration keys securely.
+
+Example:
+
+NEXT_PUBLIC_AUTH_URL=your_auth_url  
+NEXT_PUBLIC_AUTH_KEY=your_auth_key
+
+## Responsiveness
+
+The website is fully responsive for mobile, tablet, and desktop devices.
+
+---
+
+## Deployment
+
+The project is deployed on Vercel. All routes work properly without errors on reload.
+
+
+## GitHub Commits
+
+At least 10 meaningful commits with clear and descriptive messages have been included.
+
+
+## Project Structure
+
+
+app/
+  components/
+  data/
+    products.json
+  products/
+    page.jsx
+    [id]/page.jsx
+  profile/
+  login/
+  register/
+  layout.tsx
+  page.tsx
+
+
+
+## Sinthia Akter Esha
