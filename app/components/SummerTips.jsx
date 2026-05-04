@@ -11,7 +11,7 @@ export default function SummerTips() {
           alt="summer"
           className="w-8 h-8"
         />
-        <h2 className="text-3xl md:text-3xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Summer Care Tips
         </h2>
       </div>
@@ -21,7 +21,7 @@ export default function SummerTips() {
 
         {/* BOX 1 */}
         <div className="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp">
-          <h3 className="text-2xl font-semibold text-lg mb-3">Hydration</h3>
+          <h3 className="text-3xl font-semibold text-lg mb-3">Hydration</h3>
           <ul className="text-gray-600 space-y-2">
             <li>Drink plenty of water</li>
             <li>Always carry a water bottle</li>
@@ -30,7 +30,7 @@ export default function SummerTips() {
 
         {/* BOX 2 */}
         <div className="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-1s">
-          <h3 className="text-2xl font-semibold text-lg mb-3">Skin Care</h3>
+          <h3 className="text-3xl font-semibold text-lg mb-3">Skin Care</h3>
           <ul className="text-gray-600 space-y-2">
             <li>Use sunscreen SPF 50+</li>
             <li> Apply moisturizer regularly</li>
@@ -39,7 +39,7 @@ export default function SummerTips() {
 
         {/* BOX 3 */}
         <div className="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-2s">
-          <h3 className="text-2xl font-semibold text-lg mb-3">Protection</h3>
+          <h3 className="text-3xl font-semibold text-lg mb-3">Protection</h3>
           <ul className="text-gray-600 space-y-2">
             <li>Wear sunglasses outdoors</li>
             <li> Use hats to protect from sun</li>
