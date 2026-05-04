@@ -5,7 +5,7 @@ export default function TopBrands() {
       {/* HEADING */}
       <div className="flex items-center justify-center gap-2 mb-8">
         <img src="/icons/tag-card.png" className="w-7 h-7" />
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
           Top Brands
         </h2>
       </div>
