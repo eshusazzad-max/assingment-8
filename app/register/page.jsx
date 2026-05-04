@@ -26,13 +26,13 @@ export default function RegisterPage() {
       });
 
       if (!res) {
-        toast.error("Registration failed ❌");
+        toast.error("Registration failed ");
       } else {
-        toast.success("Registration successful 🎉");
+        toast.success("Registration successful ");
         router.push("/login");
       }
     } catch (err) {
-      toast.error("Something went wrong ❌");
+      toast.error("Something went wrong ");
     }
   };
 
@@ -79,7 +79,7 @@ export default function RegisterPage() {
           Register
         </button>
 
-        {/* 🔗 Login link */}
+        {/* Login link */}
         <p className="text-sm mt-3 text-center">
           Already have an account?{" "}
           <Link href="/login" className="text-orange-500">

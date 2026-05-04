@@ -45,7 +45,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <button className="animate__animated animate__pulse animate__infinite mt-8 px-8 py-3 bg-orange-500 text-white rounded-full text-lg hover:bg-orange-600 transition">
+            <button className="animate__animated animate__pulse animate__infinite mt-8 px-8 py-3 bg-orange-500 text-white rounded-full text-lg hover:bg-orange-600 transition cursor-pointer">
               Shop Now →
             </button>
 

@@ -37,10 +37,10 @@ export default function UpdateProfile() {
         image: form.image,
       });
 
-      alert("Updated successfully ✅");
+      alert("Updated successfully");
       router.push("/profile");
     } catch (err) {
-      alert("Update failed ❌");
+      alert("Update failed");
     }
   };
 

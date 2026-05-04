@@ -52,9 +52,9 @@ export default function ProfilePage() {
           {user.email}
         </p>
 
-        {/* EXTRA INFO (optional but cool) */}
+        {/* EXTRA INFO */}
         <p className="text-sm text-gray-400 mt-1">
-          Welcome to your profile 👋
+          Welcome to your profile 
         </p>
 
         {/* UPDATE BUTTON */}
