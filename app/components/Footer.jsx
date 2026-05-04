@@ -17,14 +17,14 @@ export default function Footer() {
 
         {/*  CONTACT */}
         <div>
-          <h3 className="font-semibold mb-2">Contact</h3>
+          <h3 className="text-2xl font-semibold mb-2">Contact</h3>
           <p className="text-sm text-gray-400">Email: eshusazzad@gmail.com</p>
           <p className="text-sm text-gray-400">Phone: +880 1737 456789</p>
         </div>
 
-        {/* 🔗 LINKS + SOCIAL */}
+        {/* LINKS + SOCIAL */}
         <div>
-          <h3 className="font-semibold mb-2">Quick Links</h3>
+          <h3 className="text-2xl font-semibold mb-2">Quick Links</h3>
 
           <ul className="text-sm text-gray-400 space-y-1">
             <li className="hover:text-orange-400 cursor-pointer">
