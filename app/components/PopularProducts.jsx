@@ -14,7 +14,7 @@ export default function PopularProducts() {
           alt="fire icon"
           className="w-9 h-9 object-contain"
         />
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
           Popular Products
         </h2>
       </div>

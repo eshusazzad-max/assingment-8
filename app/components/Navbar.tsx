@@ -26,7 +26,7 @@ export default function Navbar() {
     router.push("/login");
   };
 
-  // 🔥 COMMON STYLE (IMPORTANT)
+  //  COMMON STYLE (IMPORTANT)
   const navLink =
     "inline-block px-3 py-1 rounded-md text-gray-700 " +
     "hover:bg-orange-100 hover:text-orange-500 " +
